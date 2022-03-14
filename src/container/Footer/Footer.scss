@@ -1,0 +1,175 @@
+.app__footer {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.app__footer-cards {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4em 2rem 2rem;
+
+  .app__footer-card {
+    min-width: 290px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #aeefff;
+
+    transition: all 0.3s ease-in-out;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin: 0 0.7rem;
+    }
+
+    p {
+      font-weight: 500;
+
+    }
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: black;
+    }
+    &:hover {
+      box-shadow: 0 0 20px #f2f7fb;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.app__footer-cards .app__footer-card:last-child {
+  background-color: #fef4f5;
+
+}
+
+.app__footer-cards .app__footer-card:last-child:hover {
+  box-shadow: 0 0 20px #f2f7fb;
+
+}
+.app__footer-card {
+  .p-text{
+    font-family: Consolas, sans-serif;
+    font-size: 15px;
+  }
+}
+
+.app__footer-form {
+  width: 60%;
+  flex-direction: column;
+  margin: 1rem 2rem;
+
+  h3 {
+    color: #ff0000;
+    font-family: Consolas, sans-serif;
+    font-size: 15px;
+  }
+
+  div {
+    width: 100%;
+
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+
+    transition: all 0.3s ease-in-out;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.95rem;
+      border: none;
+      border-radius: 7px;
+      background-color: var(--white-color);
+
+      font-family: Consolas, var(--font-base);
+      color: var(--black-color);
+      outline: none;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 25px var(--primary-color);
+    }
+  }
+
+  button {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #3185FC;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    color: #ffffff;
+    outline: none;
+    margin: 2rem 0 0 0;
+    font-family: var(--font-base);
+
+    transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    cursor: pointer;
+
+    &:hover {
+      background-color: #3C91E6;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .effect {
+    transition: all 0.2s linear 0s;
+
+    &:before {
+      content: "\f0e0";
+      font-family: FontAwesome, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 30px;
+      height: 100%;
+      background-color: var(--secondary-color);
+      transition: all 0.2s linear 0s;
+      text-align: center;
+    }
+
+    &:hover {
+      text-indent: -20px;
+
+      &:before {
+        right: 0;
+        text-indent: 0px;
+      }
+    }
+  }
+}
