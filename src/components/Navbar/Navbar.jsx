@@ -4,6 +4,7 @@ import { images } from "../../constants";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import ToggleButton from "../ToggleButton/ToggleButton";
+import { SocialMedia } from "../index";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -37,6 +38,9 @@ const Navbar = () => {
       <div className="app__navbar-logo">
         <ToggleButton onChange={toggleDarkMode} />
       </div>
+      {/* <div className="app__navbar-social">
+        <SocialMedia />
+      </div>*/}
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "contact"].map((item, index) => (
           <li className="app__flex p-text" key={`link-${item}`}>
@@ -51,19 +55,26 @@ const Navbar = () => {
 
         {toggle && (
           <motion.div
-            whileInView={{ x: [-300, 0] }}
-            transition={{ duration: 0.55, ease: "easeOut" }}
+            className="backdrop"
+            onClick={() => setToggle(false)}
+            whileInView={{ opacity: [0.5, 1] }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
           >
-            <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <motion.div
+              whileInView={{ x: [-300, 0] }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <HiX onClick={() => setToggle(false)} />
+              <ul>
+                {["home", "about", "work", "skills", "contact"].map((item) => (
+                  <li key={item}>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
         )}
       </div>

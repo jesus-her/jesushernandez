@@ -1,18 +1,21 @@
 import React from "react";
-import { BsTwitter, BsInstagram } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
+import { BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
+import { FaFacebookF, FaYoutube } from "react-icons/fa";
 
 const SocialMedia = () => (
   <div className="app__social">
-    <div>
-      <BsTwitter />
-    </div>
-    <div>
-      <FaFacebookF />
-    </div>
-    <div>
+    <a href="https://github.com/lilpix-px" target="_blank">
+      <BsGithub />
+    </a>
+    <a
+      href="https://www.youtube.com/channel/UCt2zesKgsx9AGe-qXFcWbOg"
+      target="_blank"
+    >
+      <FaYoutube />
+    </a>
+    <a href="https://www.instagram.com/jesus_.hn/" target="_blank">
       <BsInstagram />
-    </div>
+    </a>
   </div>
 );
 

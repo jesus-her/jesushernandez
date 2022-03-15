@@ -61,7 +61,7 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-  background-color: #fef4f5;
+  background-color: #6dffc4;
 
 }
 
@@ -148,8 +148,9 @@
     transition: all 0.2s linear 0s;
 
     &:before {
-      content: "\f0e0";
-      font-family: FontAwesome, sans-serif;
+      content: ">";
+      font-weight: bolder;
+      font-family:  "VALORANT", "Rubik",sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;

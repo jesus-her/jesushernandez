@@ -4,6 +4,7 @@ import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
+import { SocialMedia } from "../../components";
 
 const Footer = () => {
   const [formData, setFormData] = useState({

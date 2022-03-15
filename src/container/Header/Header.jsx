@@ -29,7 +29,9 @@ const Header = () => {
           {/* <span>👋</span>*/}
           {/*    <div style={{ marginLeft: 20 }}>*/}
           {/*<h1 className="head-text">Hello, I am</h1>*/}
-          <h1 className="head-text">Hi, I am Jesús,</h1>
+          <h1 className="head-text">
+            Hi, <br /> I am Jesús,
+          </h1>
           {/* <h1 className="head-text">I am Jesús,</h1>*/}
           <h1 className="head-text-highlight head-text">web & mobile</h1>
           <h1 className="head-text">developer</h1>

@@ -38,17 +38,21 @@
 
 .copyright {
   width: 100%;
-  padding: 2rem 0 0;
-
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
 
   p {
     text-transform: uppercase;
     color: var(--black-color);
+    @media screen and (max-width: 450px) {
+      font-size: 0.65rem;
+    }
   }
+
+
 }
 
 .head-text {
@@ -101,13 +105,11 @@
 
 .app__social {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
+  gap: .5rem;
+  flex-direction: row;
 
-  padding: 1rem;
 
-  div {
+  a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -179,12 +181,27 @@
 }
 
 @media screen and (max-width: 500px) {
-  .app__navigation,
-  .app__social {
+  .app__navigation {
     display: none;
+  }
+  .app__social {
+    a {
+      width: 2rem;
+      height: 2rem;
+
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
   }
 
   .copyright {
     padding: 2rem;
+
   }
 }
+
+

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Work.scss";
-import WorkModal from "../../components/WorkModal/WorkModal";
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -126,13 +125,6 @@ const Work = () => {
             </div>
           </a>
         ))}
-        {/*<WorkModal setShowModal={setShowModal} showModal={showModal}>
-           <h2>{handleWorkTitle}</h2>
-          <h2>{handleWorkScreens}</h2>
-          {handleWorkScreens.map((item, index) => (
-            <img src={item.screens} alt="lol" />
-          ))}
-        </WorkModal>*/}
       </motion.div>
     </>
   );
